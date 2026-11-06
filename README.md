@@ -188,7 +188,7 @@ The workflow is configured to run when:
 The current workflow performs the following checks:
 
 - Checks out the repository.
-- Sets up Python 3.11.
+- Sets up Python 3.11 and validates python syntax.
 - Compiles Python source files to identify syntax errors.
 
 Workflow configuration:
