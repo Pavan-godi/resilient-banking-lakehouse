@@ -172,3 +172,27 @@ All banking records used in this project are synthetic. No actual customer banki
 
 
 The objective is to build and document a banking data pipeline while gaining practical experience with data ingestion, distributed processing, Delta Lake, data quality, incremental processing and pipeline recovery.
+
+
+## Continuous Integration
+
+The project uses GitHub Actions to perform automated Python syntax validation.
+
+### Current CI checks
+
+The workflow is configured to run when:
+
+- Code is pushed to the `develop` branch.
+- A Pull Request targets the `develop` branch.
+
+The current workflow performs the following checks:
+
+- Checks out the repository.
+- Sets up Python 3.11 and validates python syntax.
+- Compiles Python source files to identify syntax errors.
+
+Workflow configuration:
+
+`.github/workflows/banking-lakehouse-ci.yml`
+
+Additional automated unit tests, data quality tests, and Databricks deployment automation are planned for subsequent development.
